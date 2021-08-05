@@ -25,10 +25,13 @@ def centroidmover(centroid_xpositions,centroid_ypositions,n,datax,datay,dictiona
     xcoord = datax[i]
     ycoord = datay[i]
     splitting = dictionary
-    for j in range(n):    
-      for k in range(n):
-        if dist(xcoord,ycoord,centroid_xpositions[k],centroid_ypositions[k])<= dist(xcoord,ycoord,centroid_xpositions[j],centroid_ypositions[j]):
-            
+    for firstpoint in range(n):    
+      for secondpoint in range(n):
+        if dist(xcoord,ycoord,centroid_xpositions[secondpoint],centroid_ypositions[secondpoint])<= dist(xcoord,ycoord,centroid_xpositions[firstpoint],centroid_ypositions[firstpoint]):
+          break
+        
+
+
 
   
 
